@@ -31,7 +31,7 @@ public:
 	float read();
 	PwmOut& operator=(float duty_cycle);
 	operator float();
-private:
+protected:
 	PLATFORM_PIN_TYPE pin;
 	float duty_cycle;
 };
