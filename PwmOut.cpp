@@ -11,7 +11,7 @@
  * @brief Constructs PWM output and writes 0% duty cycle
  * @param pin Platform-specific pin ID
  */
-PwmOut::PwmOut(Platform::pintype_t pin)
+PwmOut::PwmOut(Platform::pin_t pin)
 {
 	this->pin = pin;
 	write(0.0f);
