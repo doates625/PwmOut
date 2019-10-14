@@ -26,13 +26,13 @@
 class PwmOut
 {
 public:
-	PwmOut(PLATFORM_PIN_TYPE pin);
+	PwmOut(Platform::pintype_t pin);
 	void write(float duty_cycle);
 	float read();
 	PwmOut& operator=(float duty_cycle);
 	operator float();
 protected:
-	PLATFORM_PIN_TYPE pin;
+	Platform::pintype_t pin;
 	float duty_cycle;
 };
 
