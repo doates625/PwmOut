@@ -26,7 +26,7 @@ PwmOut::PwmOut(Platform::pin_t pin)
  */
 void PwmOut::write(float duty_cycle)
 {
-	this->duty_cycle = clamp_limit(duty_cycle, 0.0f, 1.0f);
+	this->duty_cycle = CppUtil::clamp(duty_cycle, 0.0f, 1.0f);
 	analogWrite(pin, this->duty_cycle * 255.0f);
 }
 
